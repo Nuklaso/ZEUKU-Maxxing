@@ -60,11 +60,15 @@ wird **wiederverwendet**, nicht neu geschrieben.
 
 ### Starten
 
-```
-python keep_awake_gui.py
-```
+Drei Wege, alle öffnen **dasselbe Fenster**:
 
-(oder Doppelklick auf die fertige `ZEUKU-KeepAwake.exe`, siehe unten).
+- **`dist\ZEUKU-KeepAwake.exe`** doppelklicken (fertige App, kein Python nötig — siehe unten).
+- **`start_gui.bat`** doppelklicken (startet das Fenster über `pythonw`, ohne Konsole).
+- Oder im Terminal: `python keep_awake_gui.py`
+
+> **Hinweis:** `start.bat` (ohne `_gui`) startet die **Kommandozeilen-Version**
+> `keep_awake.py` — das ist nur ein **Konsolenfenster** mit Log-Text, kein GUI.
+> Für das Fenster `start_gui.bat` bzw. die `.exe` verwenden.
 
 ### Bedienung
 
