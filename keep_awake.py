@@ -178,6 +178,11 @@ def log(level, msg, *, force_stream=None):
     stream = force_stream if force_stream is not None else (
         sys.stderr if level in ("WARN", "ERROR") else sys.stdout
     )
+    if stream is None:
+        # No console attached (pythonw.exe / PyInstaller --windowed sets
+        # sys.stdout/stderr to None). Nowhere to write -- skip silently.
+        # GUI front-ends replace this whole function to route logs to a widget.
+        return
     print(line, file=stream, flush=True)
 
 
